@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서경영화(西京榮華) - 서계동 하이엔드 주거 특화 제안</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-ink: #1c1d21;
+            --color-paper: #f9f8f4;
+            --color-champagne: #c5a87c;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: var(--color-ink);
+            color: #ffffff;
+            overflow-x: hidden;
+            word-break: keep-all;
+        }
+        
+        .serif { font-family: 'Nanum Myeongjo', serif; }
+
+        .text-gold { color: var(--color-champagne); }
+        .bg-gold { background-color: var(--color-champagne); }
+        .border-gold { border-color: var(--color-champagne); }
+
+        .bg-pattern-ink {
+            background-image: radial-gradient(var(--color-paper) 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--color-ink); }
+        ::-webkit-scrollbar-thumb { background: var(--color-champagne); border-radius: 4px; }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        .k-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(197, 168, 124, 0.4);
+        }
+        .k-btn:hover, .k-btn.active {
+            background-color: var(--color-champagne);
+            color: var(--color-ink) !important;
+            border-color: var(--color-champagne);
+            transform: translateY(-1px);
+        }
+
+        .gallery-img {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gallery-img:hover {
+            transform: scale(1.04);
+            filter: brightness(1.15);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#1c1d21]/95 backdrop-blur-md border-b border-[#c5a87c]/30 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-bold serif tracking-widest text-white">서경영화</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-white/80">
+                <a href="#vision" class="nav-link hover:text-gold transition-colors">비전</a>
+                <a href="#brand-story" class="nav-link hover:text-gold transition-colors">이름의 약속</a>
+                <a href="#philosophy" class="nav-link hover:text-gold transition-colors">건축 철학</a>
+                <a href="#masterplan" class="nav-link hover:text-gold transition-colors">단지 설계</a>
+                <a href="#spaces" class="nav-link hover:text-gold transition-colors">공간 미학 (8景)</a>
+                <a href="#units" class="nav-link hover:text-gold transition-colors">평면 및 시스템</a>
+                <a href="#video-section" class="nav-link hover:text-gold transition-colors">설계 영상</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="vision" class="relative min-h-screen flex items-center justify-center bg-ink text-white overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1549405086-a365551383de?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/50"></div>
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-6 text-center fade-in-up">
+            <span class="text-gold font-extrabold tracking-widest text-xl md:text-3xl mb-3 block uppercase drop-shadow-lg">Seoul's New Center</span>
+            <p class="text-white/90 text-sm md:text-lg mb-8 font-light tracking-wide max-w-2xl mx-auto drop-shadow-md">
+                대한민국 교통과 글로벌 비즈니스의 절대적 중심, 서울역이 마주하는 단 하나의 랜드마크
+            </p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold serif tracking-tight mb-8 leading-snug text-white">
+                경계를 넘어,<br>세계의 중심으로 비상하다
+            </h1>
+            <div class="w-16 h-[2px] bg-gold mx-auto mb-8"></div>
+            <p class="text-lg md:text-xl font-light leading-relaxed text-white/90 max-w-3xl mx-auto break-keep mb-10">
+                서울의 서쪽 경계(西界)였던 서계동.<br>
+                이제 그 이름은 위대한 재개발을 통해 서울(西京)을 넘어<br>
+                대한민국과 세계가 주목하는 가장 눈부신 영광(榮華)의 자리로 거듭납니다.
+            </p>
+            <a href="#brand-story" class="inline-block px-8 py-3 bg-transparent border border-gold text-gold hover:bg-gold hover:text-ink transition-all duration-300 rounded-full font-medium">
+                이름에 담긴 약속 보기
+            </a>
+        </div>
+    </header>
+
+    <!-- Brand Story -->
+    <section id="brand-story" class="py-24 bg-ink text-white relative border-b border-gold/10">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="container mx-auto px-6 max-w-4xl text-center fade-in-up relative z-10">
+            <div class="w-16 h-16 bg-white/5 border border-gold/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-crown text-2xl text-gold"></i>
+            </div>
+            <span class="text-gold font-bold tracking-widest text-sm mb-4 block uppercase">The Name of Pride</span>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold serif text-white mb-8 md:mb-10 leading-snug">
+                이름에 담긴 헌사(獻詞),<br>오랜 기다림이 빚어낸 눈부신 자부심
+            </h2>
+            <div class="bg-white/5 p-6 md:p-10 lg:p-12 rounded-2xl border border-white/10 text-left md:text-center relative">
+                <i class="fas fa-quote-left text-2xl md:text-3xl text-gold/20 absolute top-6 left-6 md:top-8 md:left-8"></i>
+                <p class="text-white/80 text-base md:text-lg lg:text-xl leading-relaxed break-keep font-light relative z-10">
+                    '서계(西界)'라는 이름으로 한양의 서쪽 경계를 묵묵히 지키며, 저 멀리 서울의 화려한 발전을 지켜보아야만 했던 인고의 세월. 
+                    <strong class="font-bold text-white">서경영화(西京榮華)</strong>는 그 길었던 기다림의 시간을 견뎌오신 조합원 여러분께 바치는 깊은 존경의 헌사입니다.<br><br>
+                    이제 낡고 좁았던 변방의 경계를 허물고 대한민국을 넘어 세계가 주목하는 <strong class="text-gold font-bold">서울(西京)의 중심</strong>으로 비상하여, 
+                    가장 찬란한 <strong class="text-gold font-bold">영광(榮華)</strong>을 피워낼 것입니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="py-24 bg-ink text-white relative border-b border-gold/10">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">The Architect's Resolution</span>
+                <h2 class="text-4xl md:text-5xl font-bold serif text-white">40미터 단차를 지워낸 기적의 설계</h2>
+                <p class="text-white/70 mt-6 max-w-3xl mx-auto leading-relaxed break-keep">
+                    <strong>"이곳에 사는 누구도 더 이상 계단 때문에 힘들어선 안 된다."</strong><br>
+                    지형의 한계를 완벽한 평안함으로 바꾸고, 단차를 새로운 입체적 아름다움으로 승화시킨 서경영화만의 혁신적 단지 계획입니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white/5 p-8 rounded-2xl border border-gold/20 flex flex-col items-center text-center">
+                    <i class="fas fa-layer-group text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold serif mb-3 text-white">100% 원레벨 진입로</h3>
+                    <p class="text-white/70 text-sm break-keep">단지 입구부터 각 주동 현관까지 단차 없는 평지로 이어지는 유니버설 디자인.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-gold/20 flex flex-col items-center text-center">
+                    <i class="fas fa-umbrella text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold serif mb-3 text-white">전천후 하이엔드 회랑</h3>
+                    <p class="text-white/70 text-sm break-keep">비가 오나 눈이 오나 우산 없이도 쾌적하게 단지 곳곳을 누릴 수 있는 지붕 얹은 보행로.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-gold/20 flex flex-col items-center text-center">
+                    <i class="fas fa-cubes text-3xl text-gold mb-4"></i>
+                    <h3 class="text-xl font-bold serif mb-3 text-white">입체적 풍광의 재해석</h3>
+                    <p class="text-white/70 text-sm break-keep">단차를 깎아내는 대신 층층이 포개어진 공원과 커뮤니티로 단지의 가치를 극대화.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button onclick="toggleGallery('gallery-philosophy', this)" class="inline-flex items-center gap-2 px-8 py-4 border border-gold text-gold hover:bg-gold hover:text-ink transition-all duration-300 rounded-full font-bold text-sm">
+                    <span>건축 철학 갤러리 열기</span>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+            </div>
+            
+            <div id="gallery-philosophy" class="hidden mt-10">
+                <div class="flex flex-col items-center mb-8">
+                    <input type="file" id="upload-philosophy" accept="image/*" multiple class="hidden" onchange="handleGalleryUpload(event, 'philosophy')">
+                    <button onclick="verifyAdmin(() => document.getElementById('upload-philosophy').click())" class="bg-transparent text-gold border border-gold px-6 py-2 rounded-full text-xs font-bold hover:bg-gold hover:text-ink transition-colors mb-6">
+                        <i class="fas fa-lock mr-1"></i> 이미지 올리기 (관리자)
+                    </button>
+                    <div id="grid-philosophy" class="flex flex-wrap justify-center gap-3"></div>
+                    <div id="empty-philosophy" class="text-white/30 text-sm py-10 hidden">등록된 이미지가 없습니다.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masterplan -->
+    <section id="masterplan" class="py-24 bg-ink text-white relative border-b border-gold/10">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Landmark Masterplan</span>
+                <h2 class="text-3xl md:text-4xl font-bold serif text-white mb-6">도심을 향해 날개를 펼친 거대한 나비</h2>
+                <p class="text-white/80 max-w-3xl mx-auto text-sm leading-relaxed break-keep font-medium">
+                    맞통풍 가능한 주동조합설계와 전세대(분양) 남향 배치로 쾌적함을 극대화했습니다. 나비의 비상을 형상화한 유기적 곡선 데크와 방사형 주동 배치가 예술적 미학을 완성합니다.
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button onclick="toggleGallery('gallery-masterplan', this)" class="inline-flex items-center gap-2 px-8 py-4 border border-gold text-gold hover:bg-gold hover:text-ink transition-all duration-300 rounded-full font-bold text-sm">
+                    <span>단지 설계 갤러리 열기</span>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+            </div>
+
+            <div id="gallery-masterplan" class="hidden mt-10">
+                <div class="flex flex-col items-center mb-8">
+                    <input type="file" id="upload-masterplan" accept="image/*" multiple class="hidden" onchange="handleGalleryUpload(event, 'masterplan')">
+                    <button onclick="verifyAdmin(() => document.getElementById('upload-masterplan').click())" class="bg-transparent text-gold border border-gold px-6 py-2 rounded-full text-xs font-bold hover:bg-gold hover:text-ink transition-colors mb-6">
+                        <i class="fas fa-lock mr-1"></i> 이미지 올리기 (관리자)
+                    </button>
+                    <div id="grid-masterplan" class="flex flex-wrap justify-center gap-3"></div>
+                    <div id="empty-masterplan" class="text-white/30 text-sm py-10 hidden">등록된 이미지가 없습니다.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spaces (재 + 조경 + 커뮤니티) -->
+    <section id="spaces" class="py-24 bg-ink text-white relative border-b border-gold/10">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="container mx-auto px-6 relative z-10">
+
+            <!-- 1. 재(齋) -->
+            <div class="flex flex-col lg:flex-row gap-12 mb-24">
+                <div class="lg:w-5/12 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Space Aesthetics 1</span>
+                        <h2 class="text-3xl md:text-4xl font-bold serif text-white mb-4">서경영화 8경 : 재(齋)</h2>
+                        <p class="text-white/70 text-sm leading-relaxed break-keep">몸을 정결히 하고 마음을 가다듬는 하이엔드 건축 공간의 철학입니다.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3" id="spaces-buttons"></div>
+                </div>
+                <div class="lg:w-7/12 bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl flex flex-col relative min-h-[560px]">
+                    <div id="space-text-content" class="fade-in-up relative z-10 mb-8 text-white/90 leading-relaxed text-[17px]"></div>
+                    <div class="fade-in-up relative z-10 border-t border-white/10 pt-8 mt-auto">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 id="space-gallery-title" class="text-gold font-bold serif text-lg"></h4>
+                            <button onclick="verifyAdmin(() => document.getElementById('upload-space-dynamic').click())" class="bg-transparent border border-white/30 text-xs px-4 py-1.5 rounded-full hover:border-gold hover:text-gold transition-colors">이미지 올리기 (관리자)</button>
+                        </div>
+                        <input type="file" id="upload-space-dynamic" accept="image/*" multiple class="hidden" onchange="handleSpaceGalleryUpload(event)">
+                        <div id="grid-space-dynamic" class="flex flex-wrap gap-3"></div>
+                        <div id="empty-space-dynamic" class="text-white/30 text-sm py-10 text-center hidden">등록된 이미지가 없습니다.</div>
+                    </div>
+                    <div class="absolute right-8 top-8 opacity-[0.03] pointer-events-none"><i id="space-icon-bg" class="fas fa-door-open text-[14rem]"></i></div>
+                </div>
+            </div>
+
+            <!-- 2. 조경(造景) -->
+            <div class="flex flex-col lg:flex-row gap-12 mb-24 pt-16 border-t border-white/5">
+                <div class="lg:w-5/12 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Space Aesthetics 2</span>
+                        <h2 class="text-3xl md:text-4xl font-bold serif text-white mb-4">서경영화 8경 : 조경(造景)</h2>
+                        <p class="text-white/70 text-sm leading-relaxed break-keep">서울의 새로운 중심에서 피어나는 8개의 경관. 자연과 건축이 하나 되는 서경영화만의 조경 철학입니다.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3" id="landscape-buttons"></div>
+                </div>
+                <div class="lg:w-7/12 bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl flex flex-col relative min-h-[560px]">
+                    <div id="landscape-text-content" class="fade-in-up relative z-10 mb-8 text-white/90 leading-relaxed text-[17px]"></div>
+                    <div class="fade-in-up relative z-10 border-t border-white/10 pt-8 mt-auto">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 id="landscape-gallery-title" class="text-gold font-bold serif text-lg"></h4>
+                            <button onclick="verifyAdmin(() => document.getElementById('upload-landscape-dynamic').click())" class="bg-transparent border border-white/30 text-xs px-4 py-1.5 rounded-full hover:border-gold hover:text-gold transition-colors">이미지 올리기 (관리자)</button>
+                        </div>
+                        <input type="file" id="upload-landscape-dynamic" accept="image/*" multiple class="hidden" onchange="handleLandscapeGalleryUpload(event)">
+                        <div id="grid-landscape-dynamic" class="flex flex-wrap gap-3"></div>
+                        <div id="empty-landscape-dynamic" class="text-white/30 text-sm py-10 text-center hidden">등록된 이미지가 없습니다.</div>
+                    </div>
+                    <div class="absolute right-8 top-8 opacity-[0.03] pointer-events-none"><i id="landscape-icon-bg" class="fas fa-tree text-[14rem]"></i></div>
+                </div>
+            </div>
+
+            <!-- 3. 커뮤니티 (신규 추가) -->
+            <div class="flex flex-col lg:flex-row gap-12 pt-16 border-t border-white/5">
+                <div class="lg:w-5/12 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Space Aesthetics 3</span>
+                        <h2 class="text-3xl md:text-4xl font-bold serif text-white mb-4">서경영화 8경 : 커뮤니티</h2>
+                        <p class="text-white/70 text-sm leading-relaxed break-keep">입주민의 삶을 더욱 풍요롭고 특별하게 만들어 주는 8개의 커뮤니티 시설입니다.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3" id="community-buttons"></div>
+                </div>
+                <div class="lg:w-7/12 bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl flex flex-col relative min-h-[560px]">
+                    <div id="community-text-content" class="fade-in-up relative z-10 mb-8 text-white/90 leading-relaxed text-[17px]"></div>
+                    <div class="fade-in-up relative z-10 border-t border-white/10 pt-8 mt-auto">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 id="community-gallery-title" class="text-gold font-bold serif text-lg"></h4>
+                            <button onclick="verifyAdmin(() => document.getElementById('upload-community-dynamic').click())" class="bg-transparent border border-white/30 text-xs px-4 py-1.5 rounded-full hover:border-gold hover:text-gold transition-colors">이미지 올리기 (관리자)</button>
+                        </div>
+                        <input type="file" id="upload-community-dynamic" accept="image/*" multiple class="hidden" onchange="handleCommunityGalleryUpload(event)">
+                        <div id="grid-community-dynamic" class="flex flex-wrap gap-3"></div>
+                        <div id="empty-community-dynamic" class="text-white/30 text-sm py-10 text-center hidden">등록된 이미지가 없습니다.</div>
+                    </div>
+                    <div class="absolute right-8 top-8 opacity-[0.03] pointer-events-none"><i id="community-icon-bg" class="fas fa-users text-[14rem]"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Units (전용 39~133㎡ 6개) -->
+    <section id="units" class="py-24 bg-ink text-white relative border-b border-gold/10">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Residence Collection</span>
+                <h2 class="text-3xl md:text-4xl font-bold serif text-white">단위세대 평형</h2>
+                <p class="text-white/70 mt-4 max-w-xl mx-auto">전용 39㎡부터 133㎡까지 총 6가지 프리미엄 평형. 각 세대별 전용 이미지 갤러리를 제공합니다.</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-5/12 flex flex-col justify-center">
+                    <div class="mb-10">
+                        <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Unit Types</span>
+                        <h3 class="text-3xl font-bold serif text-white mb-4">6가지 전용면적</h3>
+                        <p class="text-white/70 text-sm leading-relaxed break-keep">원하는 평형을 선택하시면 해당 세대의 상세 설명과 전용 이미지 갤러리를 확인하실 수 있습니다.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3" id="units-buttons"></div>
+                </div>
+
+                <div class="lg:w-7/12 bg-white/5 rounded-3xl p-8 md:p-12 border border-white/10 shadow-xl flex flex-col relative min-h-[560px]">
+                    <div id="unit-text-content" class="fade-in-up relative z-10 mb-8 text-white/90 leading-relaxed text-[17px]"></div>
+                    <div class="fade-in-up relative z-10 border-t border-white/10 pt-8 mt-auto">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 id="unit-gallery-title" class="text-gold font-bold serif text-lg"></h4>
+                            <button onclick="verifyAdmin(() => document.getElementById('upload-unit-dynamic').click())" class="bg-transparent border border-white/30 text-xs px-4 py-1.5 rounded-full hover:border-gold hover:text-gold transition-colors">이미지 올리기 (관리자)</button>
+                        </div>
+                        <input type="file" id="upload-unit-dynamic" accept="image/*" multiple class="hidden" onchange="handleUnitGalleryUpload(event)">
+                        <div id="grid-unit-dynamic" class="flex flex-wrap gap-3"></div>
+                        <div id="empty-unit-dynamic" class="text-white/30 text-sm py-10 text-center hidden">등록된 이미지가 없습니다.</div>
+                    </div>
+                    <div class="absolute right-8 top-8 opacity-[0.03] pointer-events-none"><i id="unit-icon-bg" class="fas fa-home text-[14rem]"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video-section" class="py-24 bg-ink text-white relative">
+        <div class="absolute inset-0 bg-pattern-ink"></div>
+        <div class="container mx-auto px-6 relative z-10 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-gold font-bold tracking-widest text-sm mb-2 block uppercase">Cinematic Journey</span>
+                <h2 class="text-3xl md:text-4xl font-bold serif text-white">서경영화, 그 영광의 여정</h2>
+            </div>
+            <div class="aspect-video bg-black rounded-3xl overflow-hidden border border-gold/20 shadow-2xl relative">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3t2z7n8zZ0k" title="서경영화 프리뷰" frameborder="0" allowfullscreen class="absolute inset-0"></iframe>
+            </div>
+            <p class="text-center text-white/60 mt-6 text-sm">※ 실제 3D Fly-through 영상으로 교체 예정</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-16 text-white/60 text-xs">
+        <div class="container mx-auto px-6 text-center">
+            <div class="serif text-3xl text-gold mb-4 tracking-widest">서경영화(西京榮華)</div>
+            <p class="max-w-md mx-auto">서울특별시 용산구 서계동 33번지 일원 | 사업주: 서계동 통합재개발 추진위원회</p>
+            <p class="mt-8">© 2026 서경영화. All Rights Reserved. Designed with Pride in Seoul.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==================== 상태 관리 ====================
+        let currentSpaceIndex = 0;
+        let currentLandscapeIndex = 0;
+        let currentCommunityIndex = 0;
+        let currentUnitIndex = 0;
+
+        let galleryImages = { philosophy: [], masterplan: [] };
+        let spaceImages = {};
+        let landscapeImages = {};
+        let communityImages = {};
+        let unitImages = {};
+
+        const ADMIN_PASSWORD = "0618";
+
+        // ==================== 데이터 ====================
+        const spaceData = [
+            { id: 0, name: "휘문재", hanja: "輝文齋", desc: "문학의 빛이 스며드는 고요한 서재. 천장의 간접조명과 원목 북월이 조화된 지식의 공간으로, 가족의 지적 성장을 위한 프라이빗 라이브러리입니다.", icon: "fa-book-open" },
+            { id: 1, name: "진경재", hanja: "眞境齋", desc: "진정한 경지를 담은 명상 공간. 미니멀한 돌과 물의 조형물이 마음의 평안을 가져다주는 요가·명상실입니다.", icon: "fa-spa" },
+            { id: 2, name: "천경재", hanja: "天境齋", desc: "하늘과 맞닿은 테라스 라운지. 서울역의 스카이라인을 한눈에 담으며 와인을 즐길 수 있는 프라이빗 스카이 라운지.", icon: "fa-mountain-sun" },
+            { id: 3, name: "예화재", hanja: "藝華齋", desc: "예술이 피어나는 갤러리 살롱. 입주민 전용 아트 전시 및 소규모 콘서트가 열리는 문화 공간.", icon: "fa-palette" },
+            { id: 4, name: "번영재", hanja: "繁榮齋", desc: "번영의 에너지가 넘치는 피트니스 스튜디오. 최신 기구와 개인 트레이닝 공간이 완비된 웰니스 센터.", icon: "fa-dumbbell" },
+            { id: 5, name: "청화재", hanja: "淸華齋", desc: "맑고 화사한 티룸. 프리미엄 차와 디저트를 즐기며 이웃과 교류하는 소셜 라운지.", icon: "fa-mug-hot" },
+            { id: 6, name: "수덕재", hanja: "秀德齋", desc: "수려한 덕을 기르는 키즈 라운지. 안전하고 창의적인 놀이 공간으로 아이들의 미래를 키웁니다.", icon: "fa-child" },
+            { id: 7, name: "명아재", hanja: "明雅齋", desc: "밝고 우아한 컨시어지 라운지. 24시간 프리미엄 서비스가 제공되는 하이엔드 리셉션 공간.", icon: "fa-concierge-bell" }
+        ];
+
+        const landscapeData = [
+            { id: 0, name: "청아원", hanja: "淸雅園", desc: "맑고 우아한 중앙 정원. 40m 단차를 활용한 3층 테라스 가든으로 서울의 녹지를 품은 자연의 품.", icon: "fa-leaf" },
+            { id: 1, name: "영풍계", hanja: "榮豊溪", desc: "번영의 물줄기가 흐르는 인공 계곡. 맑은 물소리와 함께 산책로가 이어지는 힐링 공간.", icon: "fa-water" },
+            { id: 2, name: "천수림", hanja: "天樹林", desc: "하늘을 향한 수목원. 200여 종의 희귀 수종이 조성된 입주민 전용 숲.", icon: "fa-tree" },
+            { id: 3, name: "화원정", hanja: "花園亭", desc: "사계절 꽃이 피는 정원 정자. 계절마다 다른 풍경을 선사하는 포토존.", icon: "fa-seedling" },
+            { id: 4, name: "달빛연", hanja: "月光蓮", desc: "달빛 아래 연못과 연꽃. 야간 조명과 어우러진 로맨틱한 야경 공간.", icon: "fa-moon" },
+            { id: 5, name: "풍경대", hanja: "風景臺", desc: "바람과 경관이 만나는 전망대. 서울역과 남산이 한눈에 보이는 파노라마 데크.", icon: "fa-binoculars" },
+            { id: 6, name: "비단길", hanja: "緋緞路", desc: "비단처럼 부드러운 산책로. LED 조명과 함께 밤에도 안전한 산책이 가능한 길.", icon: "fa-shoe-prints" },
+            { id: 7, name: "영화정", hanja: "榮華亭", desc: "영광의 정자. 단지의 가장 높은 지점에서 서경영화의 전체 조망을 감상하는 상징 공간.", icon: "fa-archway" }
+        ];
+
+        const communityData = [
+            { id: 0, name: "연화회", hanja: "蓮華會", desc: "고급스러운 그랜드 살롱 & 라운지. 입주민들의 특별한 모임과 연회를 위한 우아한 공간.", icon: "fa-champagne-glasses" },
+            { id: 1, name: "수경회", hanja: "水鏡會", desc: "인피니티 풀과 풀사이드 라운지. 물과 빛이 어우러진 휴식의 오아시스.", icon: "fa-water" },
+            { id: 2, name: "청운회", hanja: "淸雲會", desc: "최상층 스카이 라운지. 서울의 탁 트인 전망을 즐기는 프리미엄 휴게 공간.", icon: "fa-cloud-sun" },
+            { id: 3, name: "서연회", hanja: "書硯會", desc: "프라이빗 라이브러리와 코워킹 공간. 지적 성장을 위한 조용한 공간.", icon: "fa-book-open" },
+            { id: 4, name: "몽화회", hanja: "夢花會", desc: "키즈 & 패밀리 라운지. 아이들이 안전하고 창의적으로 놀 수 있는 꿈의 놀이터.", icon: "fa-child" },
+            { id: 5, name: "영상회", hanja: "映像會", desc: "프라이빗 시네마 룸. 가족과 친구들이 함께 영화를 즐기는 전용 극장.", icon: "fa-film" },
+            { id: 6, name: "활력회", hanja: "活力會", desc: "최신식 피트니스 & 웰니스 클럽. 몸과 마음을 가꾸는 건강 공간.", icon: "fa-dumbbell" },
+            { id: 7, name: "영빈회", hanja: "迎賓會", desc: "게스트 라운지 & VIP 컨시어지. 소중한 손님을 위한 프리미엄 서비스 공간.", icon: "fa-concierge-bell" }
+        ];
+
+        const unitData = [
+            { id: 0, size: "39㎡",  desc: "1~2인 가구를 위한 스마트 컴팩트 평면. 효율적인 동선과 대용량 수납공간이 돋보이는 원룸형 설계입니다." },
+            { id: 1, size: "46㎡",  desc: "젊은 부부에게 최적화된 2베이 구조. 주방과 거실이 분리된 실용적인 평면입니다." },
+            { id: 2, size: "59㎡",  desc: "가족의 시작을 위한 3베이 중형 평면. 아이 방과 수납이 완벽하게 배치되었습니다." },
+            { id: 3, size: "84㎡",  desc: "가장 인기 있는 4베이 표준형. 남향 중심의 채광과 통풍이 뛰어난 프리미엄 세대입니다." },
+            { id: 4, size: "110㎡", desc: "넓은 거실과 4베이 구조의 대형 평면. 가족 모두가 여유롭게 생활할 수 있는 공간입니다." },
+            { id: 5, size: "133㎡", desc: "최상급 펜트하우스급 대형 평면. 5베이 구조와 대형 테라스가 포함된 최고급 세대입니다." }
+        ];
+
+        // ==================== 관리자 인증 ====================
+        function verifyAdmin(callback) {
+            const pw = prompt("관리자 비밀번호를 입력하세요 (demo: 0618)");
+            if (pw === ADMIN_PASSWORD) callback();
+            else alert("비밀번호가 일치하지 않습니다.");
+        }
+
+        // ==================== 이미지 압축 ====================
+        async function compressImage(file, maxWidth = 1600, quality = 0.82) {
+            return new Promise((resolve, reject) => {
+                if (!file.type.startsWith('image/')) return reject('이미지 파일만 가능합니다');
+                const reader = new FileReader();
+                reader.onload = e => {
+                    const img = new Image();
+                    img.onload = () => {
+                        let { width, height } = img;
+                        if (width > maxWidth) { height = Math.round(height * (maxWidth / width)); width = maxWidth; }
+                        const canvas = document.createElement('canvas');
+                        canvas.width = width; canvas.height = height;
+                        const ctx = canvas.getContext('2d', { alpha: false });
+                        ctx.drawImage(img, 0, 0, width, height);
+                        resolve(canvas.toDataURL('image/jpeg', quality));
+                    };
+                    img.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // ==================== 공통 렌더 ====================
+        function renderGrid(containerId, images, emptyId) {
+            const container = document.getElementById(containerId);
+            const emptyEl = document.getElementById(emptyId);
+            container.innerHTML = '';
+            if (!images || images.length === 0) {
+                emptyEl.classList.remove('hidden');
+                return;
+            }
+            emptyEl.classList.add('hidden');
+            images.forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                img.className = 'w-48 h-32 object-cover rounded-2xl border border-white/10 gallery-img cursor-pointer';
+                img.onclick = () => alert('상세 보기 (Lightbox 예정)');
+                container.appendChild(img);
+            });
+        }
+
+        // ==================== 업로드 핸들러 ====================
+        async function handleGalleryUpload(e, type) {
+            const files = Array.from(e.target.files);
+            if (!galleryImages[type]) galleryImages[type] = [];
+            let success = 0;
+            for (const file of files) {
+                try { const compressed = await compressImage(file); galleryImages[type].push(compressed); success++; } catch (err) { console.error(err); }
+            }
+            renderGrid(`grid-${type}`, galleryImages[type], `empty-${type}`);
+            alert(`✅ ${success}개 이미지가 자동 압축되었습니다!`);
+        }
+
+        async function handleSpaceGalleryUpload(e) {
+            const files = Array.from(e.target.files);
+            if (!spaceImages[currentSpaceIndex]) spaceImages[currentSpaceIndex] = [];
+            let success = 0;
+            for (const file of files) {
+                try { const compressed = await compressImage(file); spaceImages[currentSpaceIndex].push(compressed); success++; } catch (err) { console.error(err); }
+            }
+            renderGrid('grid-space-dynamic', spaceImages[currentSpaceIndex], 'empty-space-dynamic');
+            alert(`✅ ${success}개 이미지가 자동 압축되었습니다!`);
+        }
+
+        async function handleLandscapeGalleryUpload(e) {
+            const files = Array.from(e.target.files);
+            if (!landscapeImages[currentLandscapeIndex]) landscapeImages[currentLandscapeIndex] = [];
+            let success = 0;
+            for (const file of files) {
+                try { const compressed = await compressImage(file); landscapeImages[currentLandscapeIndex].push(compressed); success++; } catch (err) { console.error(err); }
+            }
+            renderGrid('grid-landscape-dynamic', landscapeImages[currentLandscapeIndex], 'empty-landscape-dynamic');
+            alert(`✅ ${success}개 이미지가 자동 압축되었습니다!`);
+        }
+
+        async function handleCommunityGalleryUpload(e) {
+            const files = Array.from(e.target.files);
+            if (!communityImages[currentCommunityIndex]) communityImages[currentCommunityIndex] = [];
+            let success = 0;
+            for (const file of files) {
+                try { const compressed = await compressImage(file); communityImages[currentCommunityIndex].push(compressed); success++; } catch (err) { console.error(err); }
+            }
+            renderGrid('grid-community-dynamic', communityImages[currentCommunityIndex], 'empty-community-dynamic');
+            alert(`✅ ${success}개 이미지가 자동 압축되었습니다!`);
+        }
+
+        async function handleUnitGalleryUpload(e) {
+            const files = Array.from(e.target.files);
+            if (!unitImages[currentUnitIndex]) unitImages[currentUnitIndex] = [];
+            let success = 0;
+            for (const file of files) {
+                try { const compressed = await compressImage(file); unitImages[currentUnitIndex].push(compressed); success++; } catch (err) { console.error(err); }
+            }
+            renderGrid('grid-unit-dynamic', unitImages[currentUnitIndex], 'empty-unit-dynamic');
+            alert(`✅ ${success}개 이미지가 자동 압축되었습니다!`);
+        }
+
+        // ==================== 선택 함수 ====================
+        function selectSpace(n) {
+            currentSpaceIndex = n;
+            document.querySelectorAll('#spaces-buttons button').forEach((btn, i) => btn.classList.toggle('active', i === n));
+            const data = spaceData[n];
+            document.getElementById('space-text-content').innerHTML = `<h3 class="serif text-3xl font-bold text-gold mb-3">${data.name} <span class="text-white/40 text-2xl">(${data.hanja})</span></h3><p class="text-[15.5px] leading-relaxed">${data.desc}</p>`;
+            document.getElementById('space-gallery-title').textContent = `${data.name} 갤러리`;
+            document.getElementById('space-icon-bg').className = `fas ${data.icon} text-[14rem]`;
+            if (!spaceImages[n]) spaceImages[n] = [];
+            renderGrid('grid-space-dynamic', spaceImages[n], 'empty-space-dynamic');
+        }
+
+        function selectLandscape(n) {
+            currentLandscapeIndex = n;
+            document.querySelectorAll('#landscape-buttons button').forEach((btn, i) => btn.classList.toggle('active', i === n));
+            const data = landscapeData[n];
+            document.getElementById('landscape-text-content').innerHTML = `<h3 class="serif text-3xl font-bold text-gold mb-3">${data.name} <span class="text-white/40 text-2xl">(${data.hanja})</span></h3><p class="text-[15.5px] leading-relaxed">${data.desc}</p>`;
+            document.getElementById('landscape-gallery-title').textContent = `${data.name} 갤러리`;
+            document.getElementById('landscape-icon-bg').className = `fas ${data.icon} text-[14rem]`;
+            if (!landscapeImages[n]) landscapeImages[n] = [];
+            renderGrid('grid-landscape-dynamic', landscapeImages[n], 'empty-landscape-dynamic');
+        }
+
+        function selectCommunity(n) {
+            currentCommunityIndex = n;
+            document.querySelectorAll('#community-buttons button').forEach((btn, i) => btn.classList.toggle('active', i === n));
+            const data = communityData[n];
+            document.getElementById('community-text-content').innerHTML = `<h3 class="serif text-3xl font-bold text-gold mb-3">${data.name} <span class="text-white/40 text-2xl">(${data.hanja})</span></h3><p class="text-[15.5px] leading-relaxed">${data.desc}</p>`;
+            document.getElementById('community-gallery-title').textContent = `${data.name} 갤러리`;
+            document.getElementById('community-icon-bg').className = `fas ${data.icon} text-[14rem]`;
+            if (!communityImages[n]) communityImages[n] = [];
+            renderGrid('grid-community-dynamic', communityImages[n], 'empty-community-dynamic');
+        }
+
+        function selectUnit(n) {
+            currentUnitIndex = n;
+            document.querySelectorAll('#units-buttons button').forEach((btn, i) => btn.classList.toggle('active', i === n));
+            const data = unitData[n];
+            document.getElementById('unit-text-content').innerHTML = `<h3 class="serif text-3xl font-bold text-gold mb-3">전용 ${data.size}</h3><p class="text-[15.5px] leading-relaxed">${data.desc}</p>`;
+            document.getElementById('unit-gallery-title').textContent = `전용 ${data.size} 갤러리`;
+            document.getElementById('unit-icon-bg').className = `fas fa-home text-[14rem]`;
+            if (!unitImages[n]) unitImages[n] = [];
+            renderGrid('grid-unit-dynamic', unitImages[n], 'empty-unit-dynamic');
+        }
+
+        // ==================== 갤러리 토글 ====================
+        function toggleGallery(galleryId, btn) {
+            const gallery = document.getElementById(galleryId);
+            const isHidden = gallery.classList.toggle('hidden');
+            const icon = btn.querySelector('i');
+            if (icon) icon.style.transform = isHidden ? '' : 'rotate(180deg)';
+        }
+
+        // ==================== 초기화 ====================
+        function initialize() {
+            // 재(齋) 버튼
+            const spaceContainer = document.getElementById('spaces-buttons');
+            spaceData.forEach((space, i) => {
+                const btn = document.createElement('button');
+                btn.className = `k-btn p-4 rounded-2xl text-left bg-white/5 border border-white/10 w-full flex items-center gap-3 text-sm ${i === 0 ? 'active' : ''}`;
+                btn.innerHTML = `<span class="serif font-bold">${space.name}</span><span class="text-gold text-xs ml-auto">(${space.hanja})</span>`;
+                btn.onclick = () => selectSpace(i);
+                spaceContainer.appendChild(btn);
+            });
+
+            // 조경 버튼
+            const landscapeContainer = document.getElementById('landscape-buttons');
+            landscapeData.forEach((land, i) => {
+                const btn = document.createElement('button');
+                btn.className = `k-btn p-4 rounded-2xl text-left bg-white/5 border border-white/10 w-full flex items-center gap-3 text-sm ${i === 0 ? 'active' : ''}`;
+                btn.innerHTML = `<span class="serif font-bold">${land.name}</span><span class="text-gold text-xs ml-auto">(${land.hanja})</span>`;
+                btn.onclick = () => selectLandscape(i);
+                landscapeContainer.appendChild(btn);
+            });
+
+            // 커뮤니티 버튼 (신규)
+            const communityContainer = document.getElementById('community-buttons');
+            communityData.forEach((comm, i) => {
+                const btn = document.createElement('button');
+                btn.className = `k-btn p-4 rounded-2xl text-left bg-white/5 border border-white/10 w-full flex items-center gap-3 text-sm ${i === 0 ? 'active' : ''}`;
+                btn.innerHTML = `<span class="serif font-bold">${comm.name}</span><span class="text-gold text-xs ml-auto">(${comm.hanja})</span>`;
+                btn.onclick = () => selectCommunity(i);
+                communityContainer.appendChild(btn);
+            });
+
+            // 단위세대 버튼
+            const unitContainer = document.getElementById('units-buttons');
+            unitData.forEach((unit, i) => {
+                const btn = document.createElement('button');
+                btn.className = `k-btn p-4 rounded-2xl text-left bg-white/5 border border-white/10 w-full flex items-center gap-3 text-sm ${i === 0 ? 'active' : ''}`;
+                btn.innerHTML = `<span class="serif font-bold">전용 ${unit.size}</span>`;
+                btn.onclick = () => selectUnit(i);
+                unitContainer.appendChild(btn);
+            });
+
+            // 초기 선택
+            selectSpace(0);
+            selectLandscape(0);
+            selectCommunity(0);
+            selectUnit(0);
+
+            // 스무스 스크롤
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            document.getElementById('mobile-menu-btn').addEventListener('click', () => alert('모바일 풀 네비게이션은 실제 배포 시 구현됩니다.'));
+
+            console.log('%c✅ 서경영화(西京榮華) 로드 완료\n관리자 비밀번호: 0618\n서경영화 8경 : 커뮤니티 완전 추가 완료', 'color:#c5a87c; font-size:13px');
+        }
+
+        window.onload = initialize;
+    </script>
+</body>
+</html>
